@@ -1,0 +1,19 @@
+name: Building Blocks Demo
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Say Hello
+          run: echo "GitHub Actions demo workflow running successfully!"
+
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Say Goodbye
+          run: echo "GitHub Actions demo workflow completed successfully!"
